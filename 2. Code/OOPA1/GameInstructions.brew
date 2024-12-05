@@ -1,0 +1,232 @@
+﻿{{frontCover}}
+
+{{logo ![](/assets/naturalCritLogoRed.svg)}}
+
+# BlackJack
+## Creating OOP Programs
+___
+
+{{banner Jack Jones (22055565)}}
+
+<!-- Photo by <a href="https://unsplash.com/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Markus Spiske</a> on <a href="https://unsplash.com/photos/assorted-playing-cards-on-white-surface-khurOlBGbQ8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+   -->
+
+![background image](https://images.unsplash.com/photo-1542645976-dfdbd69ee770?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D){position:absolute,bottom:0,left:0,height:100%;width:100%}
+
+\page
+
+{{toc,wide
+# Table Of Contents
+
+- ### [{{ Overview}}{{ 3}}](#p3)
+  - #### [{{ Role Types}}{{ 3}}](#p3)
+  - #### [{{ Default Admin User}}{{ 3}}](#p3)
+- ### [{{ Rules of BlackJack}}{{ 4}}](#p4)
+  - #### [{{ Card Values}}{{ 4}}](#p4)
+- ### [{{ Guides}}{{ 5}}](#p5)
+  - #### [{{ User Creation (Default)}}{{ 5}}](#p5)
+  - #### [{{ Admin Log In}}{{ 6}}](#p6)
+  - #### [{{ Admin Home Page}}{{ 7}}](#p7)
+    - [{{ Reset All Credit}}{{ 7}}](#p7)
+    - [{{ Reset Password}}{{ 7}}](#p7)
+    - [{{ Set Balance}}{{ 8}}](#p8)
+    - [{{ View Messages}}{{ 8}}](#p8)
+    - [{{ Create User}}{{ 9}}](#p9)
+  - #### [{{ Player Home Page}}{{ 10}}](#p10)
+    - [{{ Send Message}}{{ 10}}](#p10)
+  - #### [{{ Play}}{{ 11}}](#p11)
+}}
+
+
+
+
+\page
+
+# Overview
+
+This project is an implementation of the game **Blackjack** along side an admin/user magagement system.
+
+## Role Types
+
+At present, there are two types of role available for a user.
+
+- Admin
+- Player
+
+
+An **Admin** user can create custom users, manage user balances, and reset user passwords.
+
+A **Player** user is able to play a game of Blackjack.
+
+It is possible to create a **Player** user without being logged in, however, only an existing **Admin** user can create more admins.
+
+## Default Admin User
+
+There is a default administrator available for use. The credentials for that user can be found below:
+
+##### Default Admin User Credentials
+
+| Field    | Value                    |
+| :------- | :----------------------- |
+| Username | DefaultAdmin             |
+| Password | DefaultAdminPassword123! |
+
+
+\page
+
+# Rules of BlackJack
+
+The simplist rule of Blackjack, is that the player should try and get as close to 21 was possible, without going over.
+
+Once a player is logged in, they will be able to start a new game of Blackjack (provided they have the relevant credits).
+
+At this point, the user is able to select a number of credits to be able to bet.
+
+At the begining of the game, both the player and the computer will be dealt two cards from a randomly shuffled deck. The player will be able to see both of their cards, and the computer's second card.
+
+If the player does not like the look of their cards, they are able to **Fold**. Doing so stops them from playing, but does forfeit their bet.
+
+The player can also choose to **Hit**. This gives the user another card from the deck.
+
+When the player is happy with their score they are able to **Stand**. Doing so ends the players turn and starts the turn of the computer.
+
+The computer/dealer will then autoplay. Whilst the computer must hit until their score is 17 or more.
+
+If the player goes **bust** (goes over 21), or the computer's score is greater than the player's score, the player loses and the bet value is subtracted from the user's balance.
+
+If the computer goes bust, or the player's score is greater than the computer's score, the player wins and gets the value of their bet added to their balance.
+
+If the computer's score is equal to the player's score, a draw occurs, and the player doesn't lose any token.
+
+\column
+
+## Card Values
+
+| Card | Value      |
+| :---- | :--------- |
+| Ace   | 1 or 11*   |
+| 2-10  | Face Value |
+| Jack  | 10         |
+| Queen | 10         |
+| King  | 10         |
+
+**\* An Ace will be valued at 11, unless that causes a bust, in which case it will be valued as 1.**
+
+\page
+
+# Guides
+
+## User Creation (Default)
+
+1. From the home page, select **Create User**
+
+<img src='https://lh3.googleusercontent.com/d/1GXrz0akEDi5iMXJg74oo4uQr_M16ULPB=w1000?authuser=0' width="150%"/>
+
+2. Complete the details
+
+
+<img src='https://lh3.googleusercontent.com/d/1iJ7I1crC-nNT2Q0qrjft_zGJUohkQgSR=w1000?authuser=0' width="125%"/>
+
+**A password must be at least 6 characters long, contain at least one digit, be multicase, and contain one of the below characters:**
+
+<br>
+
+<span style="font-weight:bold;">
+!, £, #, $, %, ^, &amp;, *, (, ), {, }, [, ], :, ;, @, ~, ,, ., &lt;, &gt;, /, ?, -, _, +, =
+</span>
+
+\page
+
+## Admin Log In
+
+1. Enter credentials for a valid admin, and select Log In.
+
+
+<img src='https://lh3.googleusercontent.com/d/13BqpCAPeOZUdf0Ke_YH3K16y25cWVoPW=w1000?authuser=0' width="125%"/>
+
+2. If the credentials are correct, you will be presented with the admin home page.
+
+
+<img src='https://lh3.googleusercontent.com/d/1RtIm5Pqq4_BeyNeres_pwDjj5uOO8zIH=w1000?authuser=0' width="125%"/>
+
+
+\page
+
+## Admin Home Page
+
+The admin home page contains a number of features which can be useful when managing users and balances.
+
+<img src='https://lh3.googleusercontent.com/d/1RtIm5Pqq4_BeyNeres_pwDjj5uOO8zIH=w1000?authuser=0' width="125%"/>
+
+### Reset All Credit
+
+The Reset All Credit feature allows a simple way of setting the balance of all users to be £100. 
+
+
+### Reset Password
+
+The Reset Password buttons allows the adminto reset the password of a given user. 
+
+
+<img src='https://lh3.googleusercontent.com/d/1vU4vVIzgbQJf6hIW2XCeivuJzAgPMAqW=w1000?authuser=0' width="75%"/>
+
+\page
+
+### Set Balance
+
+The Set Balance buttons allows the admin to set the balance of an individual player.
+
+
+
+<img src='https://lh3.googleusercontent.com/d/1CnQvCy4_Y9xo7YD2HbJxOHhiCrM0qMFT=w1000?authuser=0' width="100%"/>
+
+\column
+
+
+### View Messages
+
+The View Messages button allows an admin to approve/decline a balance reset message from a Player. If it is approved, the Player's balance is then set to £100.
+
+
+<img src='https://lh3.googleusercontent.com/d/1zy8W8mM6K_6Jy5eQ1BcJtTz89C2e9Vry=w1000?authuser=0' width="120%"/>
+
+\page
+
+### Create User
+
+Similar to the more simple create user form, the admin create user form allows the creation of player users. It also the allows the specification of the user's balance, and also allows for the creation of admin users.
+
+
+
+<img src='https://lh3.googleusercontent.com/d/1nEdQqXWjSIouFDoy2zNYJ-xjzbW7UY-S=w1000?authuser=0' width="120%"/>
+
+\page
+
+## Player Home Page
+
+When a Player logs in they will be greeted with a more simple home page.
+
+<img src='https://lh3.googleusercontent.com/d/1ihMLZMgMeUMa5Fq7RtwkHrSilLpuCbAM=w1000?authuser=0' width="150%"/>
+
+If the user balance is insufficient, the home page will look like this.
+
+<img src='https://lh3.googleusercontent.com/d/1LBmgxFM_-CLbUgBhY-3PBnwZDsxvLEdQ=w1000?authuser=0' width="150%"/>
+
+### Send Message
+
+When the user has insufficient funds, they are able to send a balance reset request message to the admins. If this is approved, the player's balance will be set to £100.
+
+\page
+
+## Play
+
+When the player decides to play, their first step is setting a bet amount. This can range from £0 upto the user's total balance.
+
+<img src='https://lh3.googleusercontent.com/d/1jxdjXkN3uJpb0plBcz6jk6ap5-z0Xj7P=w1000?authuser=0' width="100%"/>
+
+<br>
+
+The user will then be taken into the game, where they play a game of blackjack as previously described.
+
+
+<img src='https://lh3.googleusercontent.com/d/1cXm_CgoijxTkBIUJpTi0WnQoqFI8E3CK=w1000?authuser=0' width="100%"/>

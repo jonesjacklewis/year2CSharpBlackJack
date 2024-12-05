@@ -1,0 +1,27 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOPA1.Modals"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="OOPA1.Modals.DetailedAddUserModal"
+        mc:Ignorable="d"
+        Title="DetailedAddUserModal" Height="456" Width="606" ResizeMode="NoResize">
+    <Grid >
+
+        <Label x:Name="lblUsername" FontSize="24" Content="Username" HorizontalAlignment="Left" Margin="47,64,0,0" VerticalAlignment="Top"/>
+        <TextBox IsTabStop="True" TabIndex="0" Text="" FontSize="24" x:Name="txtUsername" HorizontalAlignment="Left" Margin="252,64,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="305"/>
+        <Label x:Name="lblPassword" FontSize="24" Content="Password" HorizontalAlignment="Left" Margin="51,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.431,0.502"/>
+        <Label x:Name="lblPasswordConfirm" FontSize="24" Content="Password Confirm" HorizontalAlignment="Left" Margin="29,160,0,0" VerticalAlignment="Top"/>
+        <PasswordBox IsTabStop="True" TabIndex="1" FontSize="24" x:Name="pbPassword" HorizontalAlignment="Left" Margin="252,114,0,0" VerticalAlignment="Top" Width="305"/>
+        <PasswordBox IsTabStop="True" TabIndex="2" FontSize="24" x:Name="pbPasswordConfirm" HorizontalAlignment="Left" Margin="252,168,0,0" VerticalAlignment="Top" Width="305"/>
+        <Label x:Name="lblRoles" FontSize="24" Content="Roles" HorizontalAlignment="Left" Margin="72,198,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.488,0.844"/>
+        <ComboBox IsTabStop="True" TabIndex="3" FontSize="24" x:Name="cbRoles" HorizontalAlignment="Left" Margin="254,211,0,0" VerticalAlignment="Top" Width="303" SelectionChanged="cbRoles_SelectionChanged"/>
+        <Label FontSize="24" x:Name="lblBalance" Content="Balance" HorizontalAlignment="Left" Margin="60,266,0,0" VerticalAlignment="Top"/>
+
+        <xctk:DoubleUpDown IsTabStop="True" TabIndex="4"  FontSize="24" x:Name="dudBalance" Value="100.00" Increment="0.01" FormatString="N2" Margin="252,269,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="303" Maximum="10000.00" />
+        <Button IsTabStop="True" TabIndex="5" FontSize="24" x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Height="46" Margin="79,343,0,0" VerticalAlignment="Top" Width="170" Click="btnCancel_Click"/>
+        <Button IsTabStop="True" TabIndex="6" FontSize="24" x:Name="btnSave"  Content="Save" HorizontalAlignment="Left" Height="49" Margin="395,343,0,0" VerticalAlignment="Top" Width="170" Click="btnSave_Click"/>
+
+    </Grid>
+</Window>
